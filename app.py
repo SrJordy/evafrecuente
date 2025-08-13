@@ -38,7 +38,7 @@ audio_bytes = None
 if option == "Texto":
     text_input = st.text_area("✍️ Escribe tu texto aquí para convertirlo a audio:", height=150, placeholder="Escribe 'Hola mundo' o cualquier frase...")
 elif option == "Audio":
-    uploaded_file = st.file_uploader("🎤 Sube tu archivo de audio (MP3 o WAV):", type=["mp3","wav"])
+    uploaded_file = st.file_uploader("🎤 Sube tu archivo de audio (MP3 o WAV o M4A):", type=["mp3","wav", "m4a"])
     if uploaded_file:
         audio_bytes = uploaded_file.read()
         st.audio(audio_bytes, format=f"audio/{uploaded_file.type.split('/')[-1]}")
